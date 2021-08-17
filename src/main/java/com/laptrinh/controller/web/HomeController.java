@@ -3,6 +3,7 @@ package com.laptrinh.controller.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -11,9 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.laptrinh.service.IUserService;
+
 @Controller(value = "homeControllerOfWeb")
 public class HomeController {
 
+	@Autowired
+	private IUserService userService;
 	@RequestMapping(value = "/trang-chu", method = RequestMethod.GET)
 	public ModelAndView homePage() {
 		ModelAndView mav = new ModelAndView("web/home");
@@ -23,6 +28,12 @@ public class HomeController {
 	@RequestMapping(value = "/dang-nhap", method = RequestMethod.GET)
 	public ModelAndView login() {
 		ModelAndView mav = new ModelAndView("login");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/dang-ky", method = RequestMethod.GET)
+	public ModelAndView Register() {
+		ModelAndView mav = new ModelAndView("register");
 		return mav;
 	}
 

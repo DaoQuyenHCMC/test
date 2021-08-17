@@ -38,15 +38,15 @@
             <a href="#" class="dropdown-toggle">
                 <i class="menu-icon fa fa-list"></i>
                 <span class="menu-text"></span>
-                Quản lý bài viết
+                Quản lý tài khoản
                 <b class="arrow fa fa-angle-down"></b>
             </a>
             <b class="arrow"></b>
             <ul class="submenu">
                 <li>
-                    <a href='<c:url value='/quan-tri/bai-viet/danh-sach'/>'>
+                    <a href='<c:url value='/quan-tri/danh-sach?page=1&limit=2'/>'>
                         <i class="menu-icon fa fa-caret-right"></i>
-                        DS bài viết
+                        DS tài khoản
                     </a>
                     <b class="arrow"></b>
                 </li>
